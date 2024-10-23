@@ -14,6 +14,7 @@ import { linkupExerciseHandler } from "./utils"
  * und das Resultate wird in der Variable `withoutE` gespeichert, und kann dann
  * weiter verwendet werden.
  */
+
 export function aufgabe01(args) {
   // Wir speichern hier den Wert von args in der Variable `input` ab. Damit soll für uns klarer werden, womit wir arbeiten.
   const input = args
@@ -29,12 +30,77 @@ export function aufgabe01(args) {
     // damit wir nicht so viele Klammern schreiben müssen.
     const currentElement = input[i]
 
+    if (currentElement === "e") {
+      //do nothing
+    } else if (currentElement === "E") {
+      //auch E ignorieren
+    } else {
+      result.push(currentElement)
+    }
+
     // Hier wird das aktuelle Zeichen ans Ende der Resultat-Liste angehängt.
-    result.push(currentElement)
+
+    // Hier geben wir das Resultat zurück, und machen einen Text daraus.
   }
 
-  // Hier geben wir das Resultat zurück, und machen einen Text daraus.
   return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
+
+export function aufgabe02(args) {
+  const input = args
+  const result = [] // Das ist die Resultatliste
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const uppercaseletter = currentElement.toUpperCase()
+
+    result.push(uppercaseletter)
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = [] // Das ist die Resultatliste
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      //Zähle
+      count = count + 1
+    } else if (currentElement === "E") {
+      //Zähle
+      count = count + 1
+    } else {
+      //nicht zählen
+    }
+  }
+
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      //Zähle
+      count = count + 1
+    }
+  }
+
+  return count + 1 // weil ein Wort mehr als ein Leerzeichen
+}
+
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
