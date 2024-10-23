@@ -50,7 +50,7 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
 export function aufgabe02(args) {
   const input = args
-  const result = []
+  const result = [] // Das ist die Resultatliste
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -63,3 +63,26 @@ export function aufgabe02(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = [] // Das ist die Resultatliste
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      //Zähle
+      count = count + 1
+    } else if (currentElement === "E") {
+      //Zähle
+      count = count + 1
+    } else {
+      //nicht zählen
+    }
+  }
+
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
