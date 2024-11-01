@@ -124,3 +124,21 @@ export function aufgabe05(args) {
   return hasUpperCaseLetter
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+  let hasSpecialCharacter = false // Name für mehr Beschreibung
+
+  // Ein Ausdruck der nach Sonderzeichen sucht wird definiert
+  const specialCharacterRegex = /[!@#$%*(),.?"{}/><]/
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (specialCharacterRegex.test(currentElement)) {
+      hasSpecialCharacter = true // Es wird überprüft, ob es ein Sonderzeichen gibt
+      break // Suche wird unterbrochen wenn ein Sonderzeichen gefunden wird
+    }
+  }
+  return hasSpecialCharacter
+}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
