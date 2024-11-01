@@ -142,3 +142,11 @@ export function aufgabe06(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {
+  const input = args
+  const hasConnector = input.includes("und")
+
+  return hasConnector
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
