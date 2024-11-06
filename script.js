@@ -150,3 +150,43 @@ export function aufgabe07(args) {
   return hasConnector
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+    } else if (currentElement === "E") {
+    } else {
+      result.push(currentElement)
+    }
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable, um die Position des ersten e's zu speichern
+  let firstPosition = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn du ein e findest, speichere die Position
+    if (currentElement === "e") {
+      // Speichere die Position nur beim ersten e
+      if (firstPosition === -1) {
+        firstPosition = i
+      }
+    }
+  }
+  return firstPosition
+}
+
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
