@@ -157,8 +157,9 @@ export function aufgabe08(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
+    // Wenn du eine e entdecksts, dann ersetze diese mit einer 3
     if (currentElement === "e") {
-    } else if (currentElement === "E") {
+      result.push("3")
     } else {
       result.push(currentElement)
     }
