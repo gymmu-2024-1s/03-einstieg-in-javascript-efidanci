@@ -191,3 +191,20 @@ export function aufgabe12(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Zähle ob die Eingabe genau 6 Zeichen erhält
+    if (input.length === 6) {
+      return true
+    } else {
+      return false
+    }
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
