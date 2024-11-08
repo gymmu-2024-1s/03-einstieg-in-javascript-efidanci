@@ -296,3 +296,23 @@ export function aufgabe16(args) {
   return [result1.join(""), result2.join("")]
 }
 linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
+
+export function aufgabe17(args) {
+  const input = args
+  const result = []
+  // Die Eingabe soll als Liste gelesen werden
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      //Falls es ein Leerzeichen gibt, setze ein Komma ein
+      result.push(",")
+    } else {
+      result.push(currentElement)
+    }
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
+
+export function aufgabe17(args)
