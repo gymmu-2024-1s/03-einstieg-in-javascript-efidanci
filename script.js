@@ -262,7 +262,12 @@ export function aufgabe15(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
-    //
+    // Lesen Sie die Eingabe nur bis zum ersten Leerzeichen ein.
+    if (input[i] === " ") {
+      return result.join("")
+    } else {
+      result.push(input[i])
+    }
   }
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
