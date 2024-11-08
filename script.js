@@ -271,3 +271,28 @@ export function aufgabe15(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
+
+export function aufgabe16(args) {
+  const input = args
+  const result1 = []
+  const result2 = []
+
+  let dollarGefunden = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wenn du ein $ gefunden hast, setze dollarGefunden auf true
+    if (currentElement === "$") {
+      dollarGefunden = true
+    }
+    // Wenn dollarGefunde falsch ist, hänge an die erste Liste an
+    if (dollarGefunden === false) {
+      result1.push(currentElement)
+    } else {
+      result2.push(currentElement)
+    }
+  }
+
+  return [result1.join(""), result2.join("")]
+}
+linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
