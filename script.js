@@ -244,3 +244,25 @@ export function aufgabe14(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe11(args) {
+  const input = args
+  // Erstelle eine Variable um den ASCII-Code zu speichern
+  let asciiCode = null
+
+  //Speichere den ASCII-Code vom ersten Zeichen
+  asciiCode = input.charCodeAt(0) // charCodeAt gibt den Unicode-Wert des Zeichens an einer angegebenen Position zurück
+
+  //Gib den ASCII-Code zurück
+  return asciiCode
+}
+linkupExerciseHandler("[data-click=aufgabe11]", aufgabe11)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    //
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
