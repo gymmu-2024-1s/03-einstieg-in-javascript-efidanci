@@ -360,3 +360,18 @@ export function aufgabe21(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+  // Markiere alle Zeichen bis zum ersten "k" indem du sie durch ein "_" ersetzt
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "k") {
+      return result
+    } else {
+      result.push("_")
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
