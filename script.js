@@ -315,4 +315,24 @@ export function aufgabe17(args) {
 
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
-export function aufgabe17(args)
+export function aufgabe18(args) {
+  const input = args
+  const result = []
+  // Schreiben Sie folgende Aussage: Sie heissen "Name" und sind "Alter" Jahre alt, wobei "Name" und "Alter" durch Eingaben eingesetzt werden.
+  result.push("Ich heisse Esma und bin 16 Jahre alt.")
+  return result
+}
+
+linkupExerciseHandler("[data-click=aufgabe18]", aufgabe18)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+  //Jedes Zeichen in der Eingabe soll verdoppelt werden.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement + currentElement)
+  }
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe19]", aufgabe19)
