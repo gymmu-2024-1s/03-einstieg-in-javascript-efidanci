@@ -392,3 +392,20 @@ export function aufgabe23(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
+
+export function aufgabe24(args) {
+  const input = args
+  const result = []
+  const firstElement = input[0]
+  //speichere das letzte Element von input als Variable
+  const lastElement = input[input.length - 1]
+  //Das lastElement und das firstElement tauschen
+  result.push(lastElement)
+}
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe25(args) {
+  const input = args
+}
+
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
