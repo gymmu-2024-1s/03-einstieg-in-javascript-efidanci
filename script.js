@@ -368,10 +368,10 @@ export function aufgabe22(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "k") {
-      return result
-    } else {
-      result.push("_")
+      break
     }
+    result.push("_")
   }
+  return result
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
