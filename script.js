@@ -1,3 +1,4 @@
+import { registerConsoleShortcuts } from "vitest/node.js"
 import { linkupExerciseHandler } from "./utils"
 
 /**
@@ -375,3 +376,19 @@ export function aufgabe22(args) {
   return result
 }
 linkupExerciseHandler("[data-click=aufgabe22]", aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  const result = []
+  // speichere das erste element von input als Variable
+  const firstElement = input[0]
+  // Das erste Zeichen an den Schluss anhängen
+  result.push(firstElement)
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  result.push(firstElement)
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
