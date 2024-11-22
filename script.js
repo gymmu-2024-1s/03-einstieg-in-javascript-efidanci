@@ -413,6 +413,22 @@ export function aufgabe25(args) {
   const input = args
   const result = []
   //Speichere das mittlere Element einer ungeraden Eingabe als Variable ab
+  const middleElement = input[Math.floor(input.length / 2)]
+  //Lösche das mittlere Element
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === middleElement) {
+      continue
+    }
+    result.push(currentElement)
+  }
+  result.join(middleElement)
+  //Speichere die mittleren Elemente einer gerade Eingabe als Variable ab
+
+  const middleIndex = input.length / 2
+  //Lösche die middleElements
+
+  return result
 }
 linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
 
