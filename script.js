@@ -408,3 +408,25 @@ export function aufgabe24(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
+
+export function aufgabe25(args) {
+  const input = args
+  const result = []
+  //Speichere das mittlere Element einer ungeraden Eingabe als Variable ab
+}
+linkupExerciseHandler("[data-click=aufgabe25]", aufgabe25)
+
+export function aufgabe27(args) {
+  //Teste ob die Eingabe eine Zahl ist
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (isNaN(currentElement)) {
+      //isNaN = Not a Number (muss nicht neu definiert werden)
+      return false
+    }
+  }
+  return true
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
