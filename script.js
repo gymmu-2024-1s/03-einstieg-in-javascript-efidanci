@@ -49,7 +49,7 @@ export function aufgabe01(args) {
 linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 
 export function aufgabe02(args) {
-  const input = args
+  const input = args // args wird unter der Variable 'input' gespeichert
   const result = [] // Das ist die Resultatliste
 
   for (let i = 0; i < input.length; i++) {
@@ -269,6 +269,7 @@ export function aufgabe15(args) {
       result.push(input[i])
     }
   }
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe15]", aufgabe15)
 
