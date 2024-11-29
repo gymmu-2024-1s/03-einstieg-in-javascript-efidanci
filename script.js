@@ -222,13 +222,18 @@ linkupExerciseHandler("[data-click=aufgabe10]", aufgabe10)
 export function aufgabe13(args) {
   const input = args
   const result = []
-  // Suche die Position des letzten e 's in einem Text
+  // Position des letzten `e`s
+  let lastEPosition = -1
+  // Suche nach der Position des letzten `e`
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e") {
-      return i
+      lastEPosition = i
     }
   }
+
+  // Gebe die lastEPosition zurück
+  return lastEPosition
 }
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
