@@ -287,12 +287,15 @@ export function aufgabe16(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    // Wenn du ein $ gefunden hast, setze dollarGefunden auf true
+
+    // Wenn du ein $ gefunden hast, setze dollarGefunden auf true und überspringe es
     if (currentElement === "$") {
       dollarGefunden = true
+      continue // Dollarzeichen wird übersprungen
     }
-    // Wenn dollarGefunde falsch ist, hänge an die erste Liste an
-    if (dollarGefunden === false) {
+
+    // Wenn dollarGefunden falsch ist, hänge an die erste Liste an
+    if (!dollarGefunden) {
       result1.push(currentElement)
     } else {
       result2.push(currentElement)
@@ -301,7 +304,6 @@ export function aufgabe16(args) {
 
   return [result1.join(""), result2.join("")]
 }
-linkupExerciseHandler("[data-click=aufgabe16]", aufgabe16)
 
 export function aufgabe17(args) {
   const input = args
