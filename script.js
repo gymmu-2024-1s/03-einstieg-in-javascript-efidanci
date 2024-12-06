@@ -468,3 +468,19 @@ export function aufgabe30(args) {
   return false
 } //eigene Aufgabe
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function aufgabe31(args) {
+  // Ist basierend auf die Aufgabe 8 ; Ersetzte alle 'n' mit einem 's'
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "n") {
+      result.push("s")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result.join("") //Liste zu Text
+} // eigene Aufgabe
+linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
