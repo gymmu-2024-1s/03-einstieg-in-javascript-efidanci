@@ -484,3 +484,23 @@ export function aufgabe31(args) {
   return result.join("") //Liste zu Text
 } // eigene Aufgabe
 linkupExerciseHandler("[data-click=aufgabe31]", aufgabe31)
+
+export function aufgabe32(args) {
+  //Ist basierend auf die Aufgabe 9; Teste, ob die Eingabe genau 10 Zeichen lang ist
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "n") {
+      result.push("s")
+    } else {
+      result.push(currentElement)
+    }
+  }
+  if (result.length === 10) {
+    return true
+  } else {
+    return false
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
