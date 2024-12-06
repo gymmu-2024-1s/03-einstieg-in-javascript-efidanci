@@ -454,3 +454,17 @@ export function aufgabe27(args) {
   return true
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function aufgabe30(args) {
+  // Das ist basiert auf die Aufgabe 5 ; Erkenne ob es ein 'e' in der Eingabe gibt
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      return true
+    }
+  }
+  return false
+} //eigene Aufgabe
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
