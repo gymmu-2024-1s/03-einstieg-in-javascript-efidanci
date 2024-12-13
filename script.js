@@ -98,7 +98,7 @@ export function aufgabe04(args) {
 
     if (ascii >= 65 && ascii <= 90) {
       //Grossbuchstabe
-      result
+      result.push(currentElement)
     } else if (ascii >= 97 && ascii <= 122) {
       //Kleinbuchstabe
       result.push(currentElement)
@@ -109,7 +109,7 @@ export function aufgabe04(args) {
   }
 
   //Mögliche Leerzeichen am Stück rausfiltern
-  const result2 = {}
+  const result2 = []
   for (let i = 0; i < result.length; i++) {
     const currentElement = result[i]
     const nextElement = result[i + 1]
@@ -127,7 +127,7 @@ export function aufgabe04(args) {
   for (let i = 0; i < result2.length; i++) {
     const currentElement = result2[i]
     if (currentElement === " ") {
-      count + 1
+      count++
     }
   }
   //Es gibt ein Wort mehr als Leerzeichen, Leerzeichen wird zurückgegeben
