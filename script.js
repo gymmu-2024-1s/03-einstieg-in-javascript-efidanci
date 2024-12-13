@@ -338,17 +338,24 @@ export function aufgabe16(args) {
 
 export function aufgabe17(args) {
   const input = args
-  const result = []
-  // Die Eingabe soll als Liste gelesen werden
+  const totalList = []
+  const currentList = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //Wenn auf ein Leerzeichen getroffen wird, wird alles bisherige
+    //in die totallist gepackt
     if (currentElement === " ") {
-      //Falls es ein Leerzeichen gibt, setze ein Komma ein
-      result.push(",")
+      totalList.push(currentList.join(""))
+      currentList.length = 0
     } else {
-      result.push(currentElement)
+      currentList.push(currentElement)
     }
+
+    //Wir schreiben alles was zu Ende gelesen wurde, in die Liste
+    totalList.push(currentList.join(""))
+
+    return totalList
   }
 }
 
