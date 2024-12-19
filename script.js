@@ -403,7 +403,7 @@ export function aufgabe21(args) {
   for (let i = input.length - 1; i >= 0; i--) {
     result.push(input[i])
   }
-  return result
+  return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
 
@@ -441,16 +441,16 @@ linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 export function aufgabe24(args) {
   const input = args
   const result = []
-  // Speichere das erste und letzte Element
-  const firstElement = input[0]
-  const lastElement = input[input.length - 1]
-  // Tausche das erste und das letzte Zeichen
-  result.push(lastElement)
-  // Füge die mittleren Zeichen ein
-  for (let i = 1; i < input.length - 1; i++) {
-    result.push(input[i])
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[input.length - 1])
+    } else if (i === input.length - 1) {
+      result.push(input[0])
+    } else {
+      result.push(currentElement)
+    }
   }
-  result.push(firstElement)
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
