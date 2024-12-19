@@ -337,27 +337,23 @@ export function aufgabe16(args) {
 
 export function aufgabe17(args) {
   const input = args
-  const totalList = []
+  const totallist = []
   const currentList = []
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //Wenn auf ein Leerzeichen getroffen wird, wird alles bisherige
-    //in die totallist gepackt
+    // Wenn wir auf ein Leerzeichen treffen, dann schreiben wir alles was wir bis jetzt haben in die totallist
     if (currentElement === " ") {
-      totalList.push(currentList.join(""))
+      totallist.push(currentList.join(""))
       currentList.length = 0
     } else {
       currentList.push(currentElement)
     }
-
-    //Wir schreiben alles was zu Ende gelesen wurde, in die Liste
-    totalList.push(currentList.join(""))
-
-    return totalList
   }
+  // Wir schreiben alles was wir noch bis zu Ende gelesen haben, in die Liste
+  totallist.push(currentList.join(""))
+  return totallist
 }
-
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
 
 export function aufgabe18(args) {
