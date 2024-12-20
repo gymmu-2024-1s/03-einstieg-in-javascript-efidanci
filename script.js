@@ -51,7 +51,7 @@ linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
 export function aufgabe02(args) {
   const input = args // args wird unter der Variable 'input' gespeichert
   const result = [] // Das ist die Resultatliste
-
+  // Alles in Großbuchstaben
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const uppercaseletter = currentElement.toUpperCase()
@@ -175,7 +175,7 @@ linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
 export function aufgabe07(args) {
   const input = args
-  const hasConnector = input.includes("und")
+  const hasConnector = input.includes("und") // Überprüft, ob es ein "und" gibt. Dabei ist "Connector" "und"
 
   return hasConnector
 }
@@ -189,7 +189,7 @@ export function aufgabe08(args) {
 
     // Wenn du eine e entdecksts, dann ersetze diese mit einer 3
     if (currentElement === "e") {
-      result.push("3")
+      result.push("3") //Der neue Wert wird am Ende der Liste hinzugefügt
     } else {
       result.push(currentElement)
     }
