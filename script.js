@@ -241,9 +241,13 @@ linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
 
 export function aufgabe10(args) {
   const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+
+  // Ist RGB Hexcode korrekt?
+
+  if (input[0] === "#" && input.length === 7) {
+    return true
+  } else {
+    return false
   }
 }
 
