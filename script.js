@@ -557,13 +557,31 @@ export function aufgabe32(args) {
     if (currentElement === "n") {
       result.push("s")
     } else {
-      result.push(currentElement)
     }
   }
   if (result.length === 10) {
     return true
   } else {
     return false
+    result.push(currentElement)
   }
 }
 linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
+
+export function aufgabe33(args) {
+  // Eigene Aufgabe: Ordne alphabetisch durch Bubble Sort (Sortierverfahren)
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (i === 0) {
+      result.push(input[input.length - 1])
+    } else if (i === input.length - 1) {
+      result.push(input[0])
+    } else {
+      result.push(currentElement)
+    }
+  }
+  return result
+}
+linkupExerciseHandler("[data-click=aufgabe33]", aufgabe33)
