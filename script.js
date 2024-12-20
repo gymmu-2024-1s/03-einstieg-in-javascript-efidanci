@@ -17,7 +17,7 @@ import { linkupExerciseHandler } from "./utils"
 
 export function aufgabe01(args) {
   // Wir speichern hier den Wert von args in der Variable `input` ab. Damit soll für uns klarer werden, womit wir arbeiten.
-  const input = args
+  const input = args // args wird unter der Variable 'input' gespeichert
 
   // Wir erzeugen hier eine leere Liste, in der wir das Resultat Stück für Stück anhängen.
   const result = []
@@ -28,9 +28,10 @@ export function aufgabe01(args) {
     // Hier speichern wir das Zeichen an der Stelle `i` in der Variable
     // `currentElement`, damit es explizit ist womit wir arbeiten, aber auch
     // damit wir nicht so viele Klammern schreiben müssen.
-    const currentElement = input[i]
+    const currentElement = input[i] // input[i] ist das aktuelle Zeichen
 
     if (currentElement === "e") {
+      // Wenn das aktuelle Zeichen ein 'e' ist
       //do nothing
     } else if (currentElement === "E") {
       //auch E ignorieren
@@ -43,7 +44,7 @@ export function aufgabe01(args) {
     // Hier geben wir das Resultat zurück, und machen einen Text daraus.
   }
 
-  return result.join("")
+  return result.join("") // "join" fügt Elemente zusammen
 }
 
 linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
@@ -53,10 +54,11 @@ export function aufgabe02(args) {
   const result = [] // Das ist die Resultatliste
   // Alles in Großbuchstaben
   for (let i = 0; i < input.length; i++) {
+    // Rahmen wird bestimmt (von welcher Stelle bis zu welcher Stelle)
     const currentElement = input[i]
-    const uppercaseletter = currentElement.toUpperCase()
+    const uppercaseletter = currentElement.toUpperCase() //toUpperCase: Grossbuchstaben
 
-    result.push(uppercaseletter)
+    result.push(uppercaseletter) //Das neue Element wird am Ende der Liste hinzugefügt
   }
 
   return result.join("")
@@ -67,7 +69,7 @@ linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
 export function aufgabe03(args) {
   const input = args
   const result = [] // Das ist die Resultatliste
-  let count = 0
+  let count = 0 // DEr Startwert 0 wird zugewiesen
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -94,7 +96,7 @@ export function aufgabe04(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const ascii = currentElement.charCodeAt(0)
+    const ascii = currentElement.charCodeAt(0) //charCodeAt(0) gibt den ASCII-Code des Zeichens zurück
 
     if (ascii >= 65 && ascii <= 90) {
       //Grossbuchstabe
@@ -109,7 +111,7 @@ export function aufgabe04(args) {
   }
 
   //Mögliche Leerzeichen am Stück rausfiltern
-  const result2 = []
+  const result2 = [] // 2. "result", anders als die erste
   for (let i = 0; i < result.length; i++) {
     const currentElement = result[i]
     const nextElement = result[i + 1]
@@ -205,7 +207,7 @@ export function aufgabe12(args) {
   const result = []
 
   // Erstelle eine Variable, um die Position des ersten e's zu speichern
-  let firstPosition = -1
+  let firstPosition = -1 // Erste Position ist -1
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -263,7 +265,7 @@ export function aufgabe13(args) {
     const currentElement = input[i]
     if (currentElement === "e") {
       //Falls currentElement ein e ist
-      lastEPosition = i
+      lastEPosition = i // Letzte Position des E's wird als i gespeichert
     }
   }
 
@@ -285,7 +287,7 @@ export function aufgabe14(args) {
     if (count === 3) {
       // Bei Count 3 soll die Position gespeichert werden und den "Loop" beenden
       thirdEPosition = i
-      break
+      break // Loop wird beendet
     }
   }
 
@@ -349,7 +351,7 @@ export function aufgabe16(args) {
 
 export function aufgabe17(args) {
   const input = args
-  const totallist = []
+  const totallist = [] //totallist enthält vollständige Liste aller Elemente im Allgemeinen
   const currentList = []
 
   for (let i = 0; i < input.length; i++) {
@@ -569,7 +571,7 @@ export function aufgabe32(args) {
 linkupExerciseHandler("[data-click=aufgabe32]", aufgabe32)
 
 export function aufgabe33(args) {
-  // Eigene Aufgabe: Ordne alphabetisch durch Bubble Sort (Sortierverfahren)
+  // Eigene Aufgabe: Ordne alphabetisch durch (Sortierverfahren)
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
